@@ -45,7 +45,7 @@ include 'functions.php';
             <li><a href="?m=hitung"><span class="glyphicon glyphicon-stats"></span> Penjadwalan</a></li>   
             <li><a href="?m=hitung_hasil"><span class="glyphicon glyphicon-star"></span> Jadwal</a></li>              
             <li><a href="?m=password"><span class="glyphicon glyphicon-lock"></span> Password</a></li>
-			<li><a href="?m=v_blog_post"><span class="glyphicon glyphicon-stats"></span> Informasi</a></li> 
+			<li><a href="?m=v_blog_post"><span class="glyphicon glyphicon-stats"></span>Berita</a></li> 
             <li><a href="aksi.php?act=logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
             <?php else:?>
             <li><a href="?m=hitung_hasil"><span class="glyphicon glyphicon-star"></span> Jadwal</a></li>
