@@ -282,4 +282,23 @@ else if($mod=='jadwal_ubah'){
             WHERE id_jadwal='$_GET[ID]'");
         redirect_js("index.php?m=hitung_hasil");
     }    
+	/** Berita */    
+elseif($mod=='tambah_berita'){
+    $post_id = $_POST['post_id'];
+    $post_judul = $_POST['post_judul'];
+    $post_isi = $_POST['post_isi'];
+    $post_tanggal = $_POST['post_tanggal'];
+	$post_slug = $_POST['post_slug'];
+	$post_image = $_POST['post_image'];
+	
+    
+    if($post_id=='' || $post_judul=='')
+        print_msg("Field bertanda * tidak boleh kosong!");
+    elseif($db->get_results("SELECT * FROM tb_post WHERE post_id='$post_id'"))
+        print_msg("Kode sudah ada!");
+    else{
+        $db->query("INSERT INTO tb_post (post_id, post_judul, post_isi, post_tanggal, post_slug, post_image) 
+            VALUES ('$post_id', '$post_judul', '$post_isi', '$post_tanggal', '$post_slug', '$post_image')");                       
+        redirect_js("index.php?m=v_blog_post");
+    }    
 }   
