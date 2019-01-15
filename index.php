@@ -66,7 +66,7 @@ include 'functions.php';
     </div>
     <footer class="footer bg-primary">
       <div class="container">
-        <p>Copyright &copy; Suci puji </p>
+        <p>Copyright &copy; Polibatam - 2019 </p>
       </div>
     </footer>
 </html>
